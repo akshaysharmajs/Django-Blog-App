@@ -7,6 +7,7 @@ from django.conf import settings
 
 urlpatterns = [
     re_path('admin/', admin.site.urls),
+    re_path(r'^accounts/', include('accounts.urls')),
     re_path(r'^articles/', include('articles.urls')),
     re_path('about/$', views.about),
     re_path('$', views.homepage),
